@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@gasboard/gas.data": ["libs/gas.data/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

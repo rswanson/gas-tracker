@@ -1,0 +1,22 @@
+{
+  "root": "libs/gas.data",
+  "sourceRoot": "libs/gas.data/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/gas.data/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/gas.data"],
+      "options": {
+        "jestConfig": "libs/gas.data/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
