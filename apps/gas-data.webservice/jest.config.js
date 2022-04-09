@@ -4,9 +4,7 @@ module.exports = {
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
-    },
-    // eslint-disable-next-line no-undef
-    s,
+    }
   },
   testEnvironment: 'node',
   transform: {
