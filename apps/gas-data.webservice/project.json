@@ -1,0 +1,52 @@
+{
+  "root": "apps/gas-data.webservice",
+  "sourceRoot": "apps/gas-data.webservice/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/gas-data.webservice",
+        "main": "apps/gas-data.webservice/src/main.ts",
+        "tsConfig": "apps/gas-data.webservice/tsconfig.app.json",
+        "assets": ["apps/gas-data.webservice/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/gas-data.webservice/src/environments/environment.ts",
+              "with": "apps/gas-data.webservice/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "gas-data.webservice:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/gas-data.webservice/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/gas-data.webservice"],
+      "options": {
+        "jestConfig": "apps/gas-data.webservice/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

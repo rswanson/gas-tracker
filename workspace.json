@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "gas-data.webservice": "apps/gas-data.webservice"
+  }
+}
