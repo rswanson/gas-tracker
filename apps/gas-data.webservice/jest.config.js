@@ -4,7 +4,8 @@ module.exports = {
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
-    },s
+    },
+    s,
   },
   testEnvironment: 'node',
   transform: {
@@ -12,6 +13,6 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/apps/gas-data.webservice',
-  coverageReporters: ['clover','text-summary'],
+  coverageReporters: ['clover', 'text-summary'],
   collectCoverage: true,
 };
