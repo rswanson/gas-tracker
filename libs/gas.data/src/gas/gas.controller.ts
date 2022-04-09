@@ -3,7 +3,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 
 @Controller('gas')
 export class GasController {
-    getGasPrice() {
-        return;
-    }
+  getGasPrice() {
+    return;
+  }
 }
