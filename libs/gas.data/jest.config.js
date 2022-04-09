@@ -12,4 +12,6 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/libs/gas.data',
+  collectCoverage: true,
+  coverageReporters: ['clover', 'text-summary'],
 };

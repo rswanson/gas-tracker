@@ -2,6 +2,17 @@
   "root": "libs/gas.data",
   "sourceRoot": "libs/gas.data/src",
   "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/gas.data",
+        "tsConfig": "libs/gas.data/tsconfig.lib.json",
+        "packageJson": "libs/gas.data/package.json",
+        "main": "libs/gas.data/src/index.ts",
+        "assets": ["libs/gas.data/*.md"]
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
