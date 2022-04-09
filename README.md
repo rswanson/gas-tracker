@@ -9,5 +9,5 @@ Side project to practice coding and make something useful. For now lets mess aro
 - Create library to get data to prometheus
   - probably will need https://github.com/siimon/prom-client
 - Get grafana custom dockerfile working
-- Create grafana gasboard 
+- Create grafana gasboard
   - panel 1: live-ish (~5s?) gas metrics from etherscan
