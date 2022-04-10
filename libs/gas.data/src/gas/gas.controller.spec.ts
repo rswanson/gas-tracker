@@ -20,7 +20,7 @@ describe('GasController', () => {
   describe('getGasPrice', () => {
     it('should return the price of gas', () => {
       expect(controller.getGasPrice()).toBeUndefined;
-    })
+    });
   });
 
   it('should be defined', () => {
