@@ -11,3 +11,4 @@ Side project to practice coding and make something useful. For now lets mess aro
 - Get grafana custom dockerfile working
 - Create grafana gasboard
   - panel 1: live-ish (~5s?) gas metrics from etherscan
+- figure out mocks so I make better unit tests
