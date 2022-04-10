@@ -4,7 +4,7 @@ import { Injectable } from '@nestjs/common';
 export class GasService {
   private price: number;
 
-  getPrice() {
-    return this.price;
+  getPrice(): { price: number } {
+    return { price: 0 };
   }
 }
