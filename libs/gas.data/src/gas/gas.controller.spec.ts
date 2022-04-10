@@ -4,7 +4,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { ConfigModule } from '@nestjs/config';
 import { GasService } from './gas.service';
 import { getEnabledCategories } from 'trace_events';
-import { HttpModule, HttpService} from '@nestjs/axios';
+import { HttpModule, HttpService } from '@nestjs/axios';
 
 describe('GasController', () => {
   let service: GasService;
@@ -15,13 +15,13 @@ describe('GasController', () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [GasService],
       controllers: [GasController],
-      imports: [    
+      imports: [
         HttpModule.register({
           timeout: 5000,
           maxRedirects: 5,
         }),
         ConfigModule.forRoot(),
-      ]
+      ],
     }).compile();
 
     httpService = module.get<HttpService>(HttpService);
