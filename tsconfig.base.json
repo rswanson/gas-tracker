@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gasboard/gas.data": ["libs/gas.data/src/index.ts"]
+      "@gasboard/gas.data": ["libs/gas.data/src/index.ts"],
+      "@gasboard/metrics": ["libs/metrics/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

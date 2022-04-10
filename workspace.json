@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "gas-data.webservice": "apps/gas-data.webservice",
-    "gas.data": "libs/gas.data"
+    "gas.data": "libs/gas.data",
+    "metrics": "libs/metrics"
   }
 }

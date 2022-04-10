@@ -1,0 +1,33 @@
+{
+  "root": "libs/metrics",
+  "sourceRoot": "libs/metrics/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/metrics",
+        "tsConfig": "libs/metrics/tsconfig.lib.json",
+        "packageJson": "libs/metrics/package.json",
+        "main": "libs/metrics/src/index.ts",
+        "assets": ["libs/metrics/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/metrics/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/metrics"],
+      "options": {
+        "jestConfig": "libs/metrics/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
