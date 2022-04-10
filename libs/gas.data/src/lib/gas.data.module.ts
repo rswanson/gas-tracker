@@ -3,10 +3,12 @@ import { ConfigModule } from '@nestjs/config';
 import { HttpModule, HttpService } from '@nestjs/axios';
 import { Observable } from 'rxjs';
 import { AxiosResponse } from 'axios';
+import { GasService } from '../gas/gas.service';
+import { GasController } from '../gas/gas.controller';
 
 @Module({
-  controllers: [],
-  providers: [],
+  controllers: [GasController],
+  providers: [GasService],
   exports: [],
   imports: [HttpModule, ConfigModule.forRoot()],
 })
