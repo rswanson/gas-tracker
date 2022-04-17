@@ -6,10 +6,11 @@
 import { GasDataModule } from '@gasboard/gas.data';
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app/app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(GasDataModule);
-  const globalPrefix = 'gas';
+  const globalPrefix = '';
   app.setGlobalPrefix(globalPrefix);
   const port = process.env.PORT || 3333;
   await app.listen(port);

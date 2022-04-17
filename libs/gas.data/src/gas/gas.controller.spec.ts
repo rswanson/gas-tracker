@@ -30,7 +30,7 @@ describe('GasController', () => {
   });
   describe('getGasPrice', () => {
     it('should return the price of gas', () => {
-      expect(controller.getGasPrice()).toBeDefined();
+      expect(controller.getEtherScanGasPrice()).toBeDefined();
     });
   });
 
