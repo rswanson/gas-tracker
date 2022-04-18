@@ -6,7 +6,9 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build:docker": "docker build -t gas-data:latest -f tools/docker/gasboard-service/Dockerfile .",
+    "start:docker": "docker run -d -p 3333:3333 gas-data"
   },
   "private": true,
   "dependencies": {
