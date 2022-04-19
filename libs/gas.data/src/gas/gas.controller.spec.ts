@@ -34,6 +34,12 @@ describe('GasController', () => {
     });
   });
 
+  describe('getMetrics', () => {
+    it('should return this is fine in json', () => {
+      expect(controller.getMetrics()).toEqual({ message: 'this is fine' });
+    });
+  });
+
   it('should be defined', () => {
     expect(controller).toBeDefined();
     expect(service).toBeDefined();

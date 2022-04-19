@@ -21,4 +21,9 @@ describe('GasService', () => {
       expect(response).toHaveProperty(response.data);
     });
   });
+  describe('getMetrics', () => {
+    it('should return this is fine in json', () => {
+      expect(service.getMetrics()).toEqual({ message: 'this is fine' });
+    });
+  });
 });

@@ -18,4 +18,7 @@ export class GasService {
       process.env.ETHERSCAN_API_KEY;
     return this.httpService.get(requestURL);
   }
+  getMetrics() {
+    return { message: 'this is fine' };
+  }
 }
