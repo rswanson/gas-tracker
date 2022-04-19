@@ -8,7 +8,10 @@
     "test": "nx test",
     "prepare": "husky install",
     "build:docker": "docker build -t gas-data:latest -f tools/docker/gasboard-service/Dockerfile .",
-    "start:docker": "docker run -d -p 3333:3333 gas-data"
+    "start:docker": "docker run -d -p 3333:3333 --network swan-net --name gas-data --hostname gas-data gas-data",
+    "build:prometheus": "docker build -t swanmetrics:latest tools/docker/prometheus",
+    "start:prometheus": "docker run -d -p 9090:9090 --network swan-net --name prometheus swanmetrics:latest",
+    "clean:docker": "docker stop `docker ps -q`; docker rm `docker ps -aq`"
   },
   "private": true,
   "dependencies": {
