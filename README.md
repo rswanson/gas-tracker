@@ -2,6 +2,34 @@
 
 Side project to practice coding and make something useful. For now lets mess around with the etherscan API and maybe grafana(maybe?) for visualization and tracking.
 
+## Installation
+
+```
+npm install
+```
+
+## Build
+
+```
+# builds main service
+nx build gas-data.webservice
+# builds app container
+npm run build:docker
+# builds prometheus container
+npm run build:prometheus
+```
+
+## Run
+
+```
+# Run service locally
+nx servce
+# Run service as docker
+npm run start:docker
+# Run prometheus
+npm run start:prometheus
+```
+
 **TODO:**
 
 - ~Create prometheus config and get dockerfile working~
