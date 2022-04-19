@@ -10,23 +10,41 @@ npm install
 
 ## Build
 
+**Build gas-data.webservice**
+
 ```
-# builds main service
 nx build gas-data.webservice
-# builds app container
+```
+
+**Build app docker container**
+
+```
 npm run build:docker
-# builds prometheus container
+```
+
+**Build Prometheus**
+
+```
 npm run build:prometheus
 ```
 
 ## Run
 
+**Run Service Locally**
+
 ```
-# Run service locally
-nx servce
-# Run service as docker
+nx serve
+```
+
+**Run Service as Docker**
+
+```
 npm run start:docker
-# Run prometheus
+```
+
+# Run Prometheus
+
+```
 npm run start:prometheus
 ```
 
