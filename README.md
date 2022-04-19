@@ -42,7 +42,7 @@ nx serve
 npm run start:docker
 ```
 
-# Run Prometheus
+**Run Prometheus**
 
 ```
 npm run start:prometheus
