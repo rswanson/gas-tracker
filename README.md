@@ -48,7 +48,7 @@ npm run start:docker
 npm run start:prometheus
 ```
 
-**TODO:**
+## TODO:
 
 - ~Create prometheus config and get dockerfile working~
 - [WIP] Create library to get data from etherscan
