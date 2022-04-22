@@ -33,7 +33,7 @@
     "@nestjs/schematics": "^8.0.10",
     "@nestjs/testing": "^8.4.4",
     "@nrwl/cli": "13.10.3",
-    "@nrwl/eslint-plugin-nx": "13.10.3",
+    "@nrwl/eslint-plugin-nx": "14.0.1",
     "@nrwl/jest": "13.10.3",
     "@nrwl/linter": "13.10.3",
     "@nrwl/nest": "13.10.3",
