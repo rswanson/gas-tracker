@@ -1,6 +1,5 @@
 import { HttpService } from '@nestjs/axios';
 import { Controller, Get } from '@nestjs/common';
-import { ScheduleModule } from '@nestjs/schedule';
 import { GasService } from './gas.service';
 
 @Controller('/gas')
@@ -17,6 +16,6 @@ export class GasController {
 
   @Get('/metrics')
   getMetrics() {
-    return { message: 'this is fine' };
+    return this.gasService.getMetrics();
   }
 }
