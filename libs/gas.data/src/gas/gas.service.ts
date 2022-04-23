@@ -14,7 +14,7 @@ export class GasService {
       name: 'eth_gas_price',
       help: 'suggested etherium gas price',
       labelNames: ['price'],
-      async collect() {
+      collect() {
         const requestURL =
           'https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=' +
           process.env.ETHERSCAN_API_KEY;
