@@ -40,6 +40,12 @@ describe('GasController', () => {
     });
   });
 
+  describe('getEtherPrice', () => {
+    it('should return metrics', () => {
+      expect(controller.getEtherPrice()).toBeDefined();
+    });
+  });
+
   it('should be defined', () => {
     expect(controller).toBeDefined();
     expect(service).toBeDefined();
