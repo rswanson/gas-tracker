@@ -17,7 +17,7 @@ describe('GasService', () => {
 
   it('should map the data from etherscan and return it', () => {
     service.getGasPrice().subscribe((response) => {
-      expect(response).toBeDefined();
+      expect(response.data.result.suggestBaseFee).not.toBeNull();
     });
   });
   describe('getMetrics', () => {

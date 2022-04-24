@@ -55,7 +55,7 @@ export class GasService {
       .pipe(map((response) => response.data));
     return this.price;
   }
-  getMetrics() {
+  getMetrics(): Observable<AxiosResponse> {
     return this.register.metrics();
   }
   getEtherPrice(): Observable<AxiosResponse> {
