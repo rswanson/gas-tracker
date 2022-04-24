@@ -12,16 +12,30 @@ export class GasService {
     this.register = register;
     this.gauge = new client.Gauge({
       name: 'eth_gas_price',
-      help: 'suggested etherium gas price',
+      help: 'suggested etherium gas price in Gwei',
       labelNames: ['price'],
       collect() {
         const requestURL =
           'https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=' +
           process.env.ETHERSCAN_API_KEY;
-        const priceData = axios.get(requestURL).then((response) => {
+        axios.get(requestURL).then((response) => {
           const suggestedPrice = response.data.result.suggestBaseFee;
-          console.log(suggestedPrice);
           this.set(Number(suggestedPrice));
+        });
+      },
+      registers: [register],
+    });
+    this.gauge = new client.Gauge({
+      name: 'eth_price_usd',
+      help: 'price of eth',
+      labelNames: ['price'],
+      collect() {
+        const requestURL =
+          'https://api.etherscan.io/api?module=stats&action=ethprice&apikey=' +
+          process.env.ETHERSCAN_API_KEY;
+        axios.get(requestURL).then((response) => {
+          const ethPrice = response.data.result.ethusd;
+          this.set(Number(ethPrice));
         });
       },
       registers: [register],
@@ -31,18 +45,26 @@ export class GasService {
   private register;
   public gauge;
 
-  getPrice(): Observable<AxiosResponse> {
-    this.price = this.getGasInfo().pipe(map((response) => response.data));
-    return this.price;
-  }
-  getGasInfo(): Observable<AxiosResponse> {
+  getGasPrice(): Observable<AxiosResponse> {
     const requestURL =
       'https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=' +
       process.env.ETHERSCAN_API_KEY;
-    return this.httpService.get(requestURL);
+
+    this.price = this.httpService
+      .get(requestURL)
+      .pipe(map((response) => response.data));
+    return this.price;
   }
   getMetrics() {
-    this.gauge.inc();
     return this.register.metrics();
+  }
+  getEtherPrice(): Observable<AxiosResponse> {
+    const requestURL =
+      'https://api.etherscan.io/api?module=stats&action=ethprice&apikey=' +
+      process.env.ETHERSCAN_API_KEY;
+    const etherPrice = this.httpService
+      .get(requestURL)
+      .pipe(map((response) => response.data));
+    return etherPrice;
   }
 }
