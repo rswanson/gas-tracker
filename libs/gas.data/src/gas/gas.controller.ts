@@ -1,21 +1,26 @@
 import { HttpService } from '@nestjs/axios';
 import { Controller, Get } from '@nestjs/common';
+import { get } from 'http';
 import { GasService } from './gas.service';
 
-@Controller('/gas')
+@Controller('/')
 export class GasController {
   constructor(
     private readonly gasService: GasService,
     private readonly httpService: HttpService
   ) {}
 
-  @Get('/etherscan')
+  @Get('/etherscan/gas')
   getEtherScanGasPrice() {
-    return this.gasService.getPrice();
+    return this.gasService.getGasPrice();
   }
 
   @Get('/metrics')
   getMetrics() {
     return this.gasService.getMetrics();
+  }
+  @Get('/etherscan/price')
+  getEtherPrice() {
+    return this.gasService.getEtherPrice();
   }
 }
