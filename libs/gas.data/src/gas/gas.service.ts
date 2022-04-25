@@ -10,7 +10,7 @@ export class GasService {
     const Registry = client.Registry;
     const register = new Registry();
     this.register = register;
-    this.gauge = new client.Gauge({
+    this.gauge_gas_price = new client.Gauge({
       name: 'eth_gas_price',
       help: 'suggested etherium gas price in Gwei',
       labelNames: ['price'],
@@ -25,7 +25,7 @@ export class GasService {
       },
       registers: [register],
     });
-    this.gauge = new client.Gauge({
+    this.gauge_eth_price = new client.Gauge({
       name: 'eth_price_usd',
       help: 'price of eth',
       labelNames: ['price'],
@@ -43,7 +43,8 @@ export class GasService {
   }
   private price;
   private register;
-  public gauge;
+  public gauge_gas_price;
+  public gauge_eth_price;
 
   getGasPrice(): Observable<AxiosResponse> {
     const requestURL =
