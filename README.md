@@ -54,6 +54,7 @@ npm run start:prometheus
 - [WIP] Create library to get data from etherscan
   - ~Implement getPrice() get endpoint that calls the etherscan endpoint live and returns the data~
   - Figure out how to mock the gas.data.service.getPrice() function properly
+  - Update to jest28
   - Implement a way to store the data -> maybe redis via docker?
 - [WIP] Create library to get data to prometheus
   - ~Create metrics lib scaffolindg for functionality~
