@@ -63,3 +63,8 @@ npm run start:prometheus
 - Get grafana custom dockerfile working
 - Create grafana gasboard
   - panel 1: live-ish (~5s?) gas metrics from etherscan
+- Add integrations to live pull a dashboard or at least data for dfk
+  - Probably need https://github.com/harmony-one/sdk
+    - https://jssdk.doc.hmny.io/
+- Spec out integrations for platopia
+  - Probably need https://docs.avax.network/build/tools/avalanchejs/
