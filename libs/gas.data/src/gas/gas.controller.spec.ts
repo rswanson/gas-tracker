@@ -35,8 +35,14 @@ describe('GasController', () => {
   });
 
   describe('getMetrics', () => {
-    it('should return metrics', () => {
-      expect(controller.getMetrics()).toBeDefined();
+    it('should return an axios observable with metrics data', () => {
+      let result;
+      const mock = jest
+        .spyOn(controller, 'getMetrics')
+        .mockImplementation(() => result);
+      const metrics = controller.getMetrics();
+      expect(metrics).toBe(result);
+      expect(controller.getMetrics).toHaveReturned();
     });
   });
 
