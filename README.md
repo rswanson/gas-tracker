@@ -56,10 +56,10 @@ npm run start:prometheus
   - Figure out how to mock the gas.data.service.getPrice() function properly
   - Update to jest28
   - Implement a way to store the data -> maybe redis via docker?
-- [WIP] Create library to get data to prometheus
+- ~[WIP] Create library to get data to prometheus~
   - ~Create metrics lib scaffolindg for functionality~
-  - Implement metrics lib to expose a base endpoint
-  - probably will need https://github.com/siimon/prom-client
+  - ~Implement metrics lib to expose a base endpoint~
+  - ~probably will need https://github.com/siimon/prom-client~
 - Get grafana custom dockerfile working
 - Create grafana gasboard
   - panel 1: live-ish (~5s?) gas metrics from etherscan

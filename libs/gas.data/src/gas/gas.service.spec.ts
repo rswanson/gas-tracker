@@ -19,12 +19,11 @@ describe('GasService', () => {
   });
 
   describe('constructor', () => {
-    // it('should create a gauge to check ether price', () => {
-    //   let result
-    //   expect(service.gauge_eth_price.collect).toBe(result);
-    // });
-    it('should create a gauge with a collect function defined', () => {
+    it('should create a gas price gauge with a collect function defined', () => {
       expect(service.gauge_gas_price).toHaveProperty('collect');
+    });
+    it('should create a eth price gauge with a collect function defined', () => {
+      expect(service.gauge_eth_price).toHaveProperty('collect');
     });
   });
 
