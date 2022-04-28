@@ -68,3 +68,5 @@ npm run start:prometheus
     - https://jssdk.doc.hmny.io/
 - Spec out integrations for platopia
   - Probably need https://docs.avax.network/build/tools/avalanchejs/
+- Monitor some stuff from evmos
+  - This might help https://github.com/tharsis/evmosjs
