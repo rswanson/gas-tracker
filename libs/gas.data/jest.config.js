@@ -11,6 +11,9 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
+  moduleNameMapper: {
+    '^uuid$': require.resolve('uuid'),
+  },
   coverageDirectory: '../../coverage/libs/gas.data',
   collectCoverage: true,
   coverageReporters: ['html', 'text', 'text-summary'],
