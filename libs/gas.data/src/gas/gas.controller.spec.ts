@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { GasService } from './gas.service';
 import { getEnabledCategories } from 'trace_events';
 import { HttpModule, HttpService } from '@nestjs/axios';
+import exp = require('constants');
 
 describe('GasController', () => {
   let service: GasService;
@@ -34,6 +35,11 @@ describe('GasController', () => {
     });
   });
 
+  describe('getAvaxGasPrice', () => {
+    it('should return the price of gas on avalanche', () => {
+      expect(controller.getAvaxGasPrice()).toBeDefined();
+    });
+  });
   describe('getMetrics', () => {
     it('should return an axios observable with metrics data', () => {
       let result;

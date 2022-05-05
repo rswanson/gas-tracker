@@ -23,4 +23,8 @@ export class GasController {
   getEtherPrice() {
     return this.gasService.getEtherPrice();
   }
+  @Get('/snowtrace/gas')
+  getAvaxGasPrice() {
+    return this.gasService.getAvaxGasPrice();
+  }
 }

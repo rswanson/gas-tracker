@@ -70,3 +70,4 @@ npm run start:prometheus
   - Probably need https://docs.avax.network/build/tools/avalanchejs/
 - Monitor some stuff from evmos
   - This might help https://github.com/tharsis/evmosjs
+- Refactor gas.service to be multiple libs for different etherscan forks

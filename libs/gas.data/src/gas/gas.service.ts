@@ -68,4 +68,12 @@ export class GasService {
       .pipe(map((response) => response.data));
     return etherPrice;
   }
+  getAvaxGasPrice(): Observable<AxiosResponse> {
+    const requestURL =
+      'https://gavax.blockscan.com/gasapi.ashx?apikey=key&method=gasoracle';
+    const avaxGasPrice = this.httpService
+      .get(requestURL)
+      .pipe(map((response) => response.data));
+    return avaxGasPrice;
+  }
 }
